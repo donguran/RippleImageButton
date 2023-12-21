@@ -3,7 +3,7 @@ library ripple_image_button;
 import 'package:flutter/material.dart';
 
 class RippleImageButton extends StatelessWidget {
-  RippleImageButton({
+  const RippleImageButton({
     super.key,
     required ImageProvider image,
     required this.width,
@@ -20,9 +20,9 @@ class RippleImageButton extends StatelessWidget {
   final double width;
   final double height;
   final Function() _onTap;
-  double borderRadius;
-  BoxFit fit;
-  Color? splashColor;
+  final double borderRadius;
+  final BoxFit fit;
+  final Color? splashColor;
 
   @override
   Widget build(BuildContext context) {
