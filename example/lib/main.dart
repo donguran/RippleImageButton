@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'package:ripple_image_button/ripple_image_button.dart';
 
 void main() {
@@ -21,7 +20,7 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         body: Center(
           child: RippleImageButton(
-            image: AssetImage('example/images/google_sign_image.png'),  // or NetwrokImage
+            image: const AssetImage('example/images/google_sign_image.png'),  // or NetwrokImage
             width: 200,
             height: 50,
             onTap: () {

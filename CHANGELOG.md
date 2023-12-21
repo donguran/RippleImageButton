@@ -1,3 +1,7 @@
+## 1.0.5
+
+* check score
+
 ## 1.0.4
 
 * add use description
