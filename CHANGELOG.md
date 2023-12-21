@@ -1,3 +1,7 @@
+## 1.0.4
+
+* add use description
+
 ## 1.0.3
 
 * beta test, possible multiline?
