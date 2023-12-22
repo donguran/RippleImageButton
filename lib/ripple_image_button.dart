@@ -2,6 +2,16 @@ library ripple_image_button;
 
 import 'package:flutter/material.dart';
 
+/// [RippleImageButton]
+/// required parameters are [_image], [width], [height], [_onTap]
+///
+/// [_image] : AssetImage('assets/example/image.png') or
+/// [_image] : NetworkImage('https://example.com/image.png')
+///
+/// [borderRadius] is measure shape's radius.
+/// [fit] is image's auto size in container
+/// [splashColor] is tab color, if you tab on [ImageRippleButton] it will be
+/// show to ripple effect
 class RippleImageButton extends StatelessWidget {
   const RippleImageButton({
     super.key,
@@ -12,8 +22,7 @@ class RippleImageButton extends StatelessWidget {
     this.borderRadius = 0.0,
     this.fit = BoxFit.cover,
     this.splashColor,
-  }):
-        _image = image,
+  })  : _image = image,
         _onTap = onTap;
 
   final ImageProvider _image;
@@ -28,11 +37,11 @@ class RippleImageButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(borderRadius),
-          image: DecorationImage(
-            image: _image,
-            fit: fit,
-          )
+        borderRadius: BorderRadius.circular(borderRadius),
+        image: DecorationImage(
+          image: _image,
+          fit: fit,
+        ),
       ),
       child: Material(
         color: Colors.transparent,

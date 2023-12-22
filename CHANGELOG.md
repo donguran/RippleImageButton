@@ -1,3 +1,7 @@
+## 1.0.6
+
+* add description, upgrade score for popularity.
+
 ## 1.0.5
 
 * check score

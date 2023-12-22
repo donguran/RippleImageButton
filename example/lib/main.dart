@@ -20,12 +20,12 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         body: Center(
           child: RippleImageButton(
-            image: const AssetImage('example/images/google_sign_image.png'),  // or NetwrokImage
+            image: const AssetImage(
+                'example/images/google_sign_image.png'), // or NetwrokImage
             width: 200,
             height: 50,
-            onTap: () {
+            onTap: () {},
 
-            },
             /// borderRadius: [double] default = 0.0
             /// fit : [BoxFit] default = BoxFit.cover
             /// splashColor : [Color] default = null
