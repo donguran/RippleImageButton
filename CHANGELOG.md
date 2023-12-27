@@ -1,3 +1,7 @@
+## 1.0.7
+
+* add parameter, margin and padding.
+* 
 ## 1.0.6
 
 * add description, upgrade score for popularity.

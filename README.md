@@ -16,7 +16,7 @@ Install link : <a href="https://pub.dev/packages/ripple_image_button/install">ht
 #### pubspec.yaml
 ```dart
 dependencies:
-  ripple_image_button: ^1.0.6
+  ripple_image_button: ^1.0.7
 ```
 
 <br />
