@@ -14,43 +14,46 @@ Image Button, has ripple effect
 Install link : <a href="https://pub.dev/packages/ripple_image_button/install">https://pub.dev/packages/ripple_image_button/install</a>
 
 #### pubspec.yaml
-```dart
+```flutter
 dependencies:
-  ripple_image_button: ^1.0.7
+  ripple_image_button: ^1.0.8
 ```
 
 <br />
 
 #### import
-```dart
+```flutter
 import 'package:ripple_image_button/ripple_image_button.dart';
 ```
 
 <br/>
 
 #### use
-```dart
-    child: RippleImageButton(
-      image: AssetImage('example/images/google_sign_image.png'),  // or NetwrokImage
-      width: 200,
-      height: 50,
-      onTap: () {
+```flutter
+child: RippleImageButton(
+  image: AssetImage('example/images/google_sign_image.png'),  // or NetwrokImage
+  width: 200,
+  height: 50,
+  onTap: () {
 
-      },
-    ),
+  },
+),
 ```
 
 <br/>
 
 #### parameter
-```dart
-ImageProvider image;  // Asset or Network Image
-double width;         // width size
-double height;        // height size
-Function onTap;       // function
-double borderRadius;  // border radius size
-BoxFit fit;           // image fit
-Color splashColor;    // ripple color
+```flutter
+ImageProvider image;        // Asset or Network Image
+double width;               // width size
+double height;              // height size
+Function onTap;             // function
+EdgeInsetsGeometry margin;  // margin
+EdgeInsetsGeometry padding; // padding
+BoxConstraints constraints; // constraints, control min or max size
+double borderRadius;        // border radius size
+BoxFit fit;                 // image fit
+Color splashColor;          // ripple color
 ```
 
 <br/>

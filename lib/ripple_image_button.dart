@@ -31,9 +31,13 @@ import 'package:flutter/material.dart';
 /// [_image] : AssetImage('assets/example/image.png') or
 /// [_image] : NetworkImage('https://example.com/image.png')
 ///
+/// [constraints] if you want measure max width/height or min width/height size
+///   ex) BoxConstraints(maxWidth: 300)
+///
 /// [borderRadius] is measure shape's radius.
 /// [fit] is image's auto size in container
 /// [splashColor] is tab color, if you tab on [ImageRippleButton] it will be
+///
 /// show to ripple effect
 class RippleImageButton extends StatelessWidget {
   const RippleImageButton({
@@ -44,6 +48,7 @@ class RippleImageButton extends StatelessWidget {
     required Function() onTap,
     this.margin,
     this.padding,
+    this.constraints,
     this.borderRadius = 0.0,
     this.fit = BoxFit.cover,
     this.splashColor,
@@ -56,6 +61,7 @@ class RippleImageButton extends StatelessWidget {
   final Function() _onTap;
   final EdgeInsetsGeometry? margin;
   final EdgeInsetsGeometry? padding;
+  final BoxConstraints? constraints;
   final double borderRadius;
   final BoxFit fit;
   final Color? splashColor;
@@ -65,6 +71,7 @@ class RippleImageButton extends StatelessWidget {
     return Container(
       margin: margin,
       padding: padding,
+      constraints: constraints,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(borderRadius),
         image: DecorationImage(

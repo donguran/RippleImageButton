@@ -21,11 +21,12 @@ class MyApp extends StatelessWidget {
         body: Center(
           child: RippleImageButton(
             image: const AssetImage(
-                'example/images/google_sign_image.png'), // or NetwrokImage
+                'example/images/google_sign_image.png'), // or NetworkImage
             width: 200,
             height: 50,
             onTap: () {},
 
+            /// constraints : BoxConstraints(maxWidth: 300)
             /// borderRadius: [double] default = 0.0
             /// fit : [BoxFit] default = BoxFit.cover
             /// splashColor : [Color] default = null
