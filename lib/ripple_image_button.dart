@@ -31,6 +31,7 @@ import 'package:flutter/material.dart';
 /// [_image] : AssetImage('assets/example/image.png') or
 /// [_image] : NetworkImage('https://example.com/image.png')
 ///
+/// [margin], [padding] measure EdgeInsetsGeometry
 /// [constraints] if you want measure max width/height or min width/height size
 ///   ex) BoxConstraints(maxWidth: 300)
 ///
