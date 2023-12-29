@@ -16,38 +16,72 @@ Install link : <a href="https://pub.dev/packages/ripple_image_button/install">ht
 #### pubspec.yaml
 ```flutter
 dependencies:
-  ripple_image_button: ^1.0.8
+  ripple_image_button: ^1.0.9
 ```
 
 <br />
 
 #### import
-```flutter
+```dart
 import 'package:ripple_image_button/ripple_image_button.dart';
 ```
 
 <br/>
 
 #### use
-```flutter
-child: RippleImageButton(
+```dart
+RippleImageButton(
   image: AssetImage('example/images/google_sign_image.png'),  // or NetwrokImage
-  width: 200,
-  height: 50,
   onTap: () {
 
   },
 ),
 ```
+![image](https://github.com/b3lon9/RippleImageButton/assets/119420119/0b927fd2-6b89-4bbf-8ddf-7d44a5b44a46)
+```dart
+Column(
+  mainAxisAlignment: MainAxisAlignment.center,
+  children: [
+    SizedBox(
+      width: 200,
+      height: 50,
+      child: RippleImageButton(
+        image: const AssetImage('images/google_sign_image.png'), // or NetworkImage
+        onTap: () {},
+      ),
+    ),
+
+    const SizedBox(height: 18,),
+
+    RippleImageButton(
+      image: const AssetImage('images/google_sign_image.png'),
+      onTap: () {},
+      width: 200,
+      height: 50,
+    ),
+
+    const SizedBox(height: 18),
+
+    RippleImageButton(
+      image: const AssetImage('images/google_sign_image.png'),
+      onTap: () {},
+      width: 200,
+      height: 50,
+      borderRadius: 30,
+    )
+  ],
+),
+```
+
 
 <br/>
 
 #### parameter
 ```flutter
 ImageProvider image;        // Asset or Network Image
+Function onTap;             // function
 double width;               // width size
 double height;              // height size
-Function onTap;             // function
 EdgeInsetsGeometry margin;  // margin
 EdgeInsetsGeometry padding; // padding
 BoxConstraints constraints; // constraints, control min or max size
