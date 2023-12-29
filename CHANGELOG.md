@@ -1,3 +1,8 @@
+## 1.0.9
+
+* add example code
+* width, height property are inference parent's size
+
 ## 1.0.8
 
 * add parameter, constraints.

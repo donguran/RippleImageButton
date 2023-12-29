@@ -15,21 +15,43 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        primaryColor: Colors.purple.shade500,
         useMaterial3: true,
       ),
       home: Scaffold(
+        backgroundColor: Theme.of(context).primaryColor,
         body: Center(
-          child: RippleImageButton(
-            image: const AssetImage(
-                'example/images/google_sign_image.png'), // or NetworkImage
-            width: 200,
-            height: 50,
-            onTap: () {},
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              SizedBox(
+                width: 200,
+                height: 50,
+                child: RippleImageButton(
+                  image: const AssetImage('images/google_sign_image.png'), // or NetworkImage
+                  onTap: () {},
+                ),
+              ),
 
-            /// constraints : BoxConstraints(maxWidth: 300)
-            /// borderRadius: [double] default = 0.0
-            /// fit : [BoxFit] default = BoxFit.cover
-            /// splashColor : [Color] default = null
+              const SizedBox(height: 18,),
+
+              RippleImageButton(
+                image: const AssetImage('images/google_sign_image.png'),
+                onTap: () {},
+                width: 200,
+                height: 50,
+              ),
+
+              const SizedBox(height: 18),
+
+              RippleImageButton(
+                image: const AssetImage('images/google_sign_image.png'),
+                onTap: () {},
+                width: 200,
+                height: 50,
+                borderRadius: 30,
+              )
+            ],
           ),
         ),
       ),

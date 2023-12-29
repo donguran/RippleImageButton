@@ -26,7 +26,9 @@ library ripple_image_button;
 import 'package:flutter/material.dart';
 
 /// [RippleImageButton]
-/// required parameters are [_image], [width], [height], [_onTap]
+/// required parameters are [_image], [_onTap]
+///
+/// width, height are inference parent's size
 ///
 /// [_image] : AssetImage('assets/example/image.png') or
 /// [_image] : NetworkImage('https://example.com/image.png')
@@ -44,9 +46,9 @@ class RippleImageButton extends StatelessWidget {
   const RippleImageButton({
     super.key,
     required ImageProvider image,
-    required this.width,
-    required this.height,
     required Function() onTap,
+    this.width,
+    this.height,
     this.margin,
     this.padding,
     this.constraints,
@@ -57,9 +59,9 @@ class RippleImageButton extends StatelessWidget {
         _onTap = onTap;
 
   final ImageProvider _image;
-  final double width;
-  final double height;
   final Function() _onTap;
+  final double? width;
+  final double? height;
   final EdgeInsetsGeometry? margin;
   final EdgeInsetsGeometry? padding;
   final BoxConstraints? constraints;
