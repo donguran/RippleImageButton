@@ -1,3 +1,8 @@
+## 1.1.1
+
+* modify documentation
+* define width (= 200), height (= 50) size
+
 ## 1.0.9
 
 * add example code

@@ -30,6 +30,8 @@ class MyApp extends StatelessWidget {
                 child: RippleImageButton(
                   image: const AssetImage('images/google_sign_image.png'), // or NetworkImage
                   onTap: () {},
+                  width: 50,
+                  height: 100,
                 ),
               ),
 
@@ -38,8 +40,7 @@ class MyApp extends StatelessWidget {
               RippleImageButton(
                 image: const AssetImage('images/google_sign_image.png'),
                 onTap: () {},
-                width: 200,
-                height: 50,
+                splashColor: Colors.red.withOpacity(0.5),
               ),
 
               const SizedBox(height: 18),

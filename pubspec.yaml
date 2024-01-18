@@ -2,9 +2,9 @@ name: ripple_image_button
 description: "RippleImageButton has ripple effect on click.
 Image widget can not ripple effect on wrapped InkWell Widget. 
 so I tried to Container Widget and could be have ripple effect on click"
-version: 1.0.9
-homepage: "https://cavedwellers.co.kr"
-repository: "https://github.com/b3lon9/RippleImageButton"
+version: 1.1.1
+homepage: "https://donguran.com/pages/RippleImageButton"
+repository: "https://github.com/donguran/RippleImageButton"
 
 environment:
   sdk: '>=3.2.3 <4.0.0'

@@ -16,7 +16,7 @@ Install link : <a href="https://pub.dev/packages/ripple_image_button/install">ht
 #### pubspec.yaml
 ```flutter
 dependencies:
-  ripple_image_button: ^1.0.9
+  ripple_image_button: ^1.1.1
 ```
 
 <br />
@@ -30,6 +30,9 @@ import 'package:ripple_image_button/ripple_image_button.dart';
 
 #### use
 ```dart
+/// image : AssetImage([LOCAL IMAGE PATH])
+/// image : NetworkImage([NETWORK IMAGE PATH])
+/// image : FileImage(File([FILE IMAGE PATH]))
 RippleImageButton(
   image: AssetImage('example/images/google_sign_image.png'),  // or NetwrokImage
   onTap: () {
@@ -48,6 +51,8 @@ Column(
       child: RippleImageButton(
         image: const AssetImage('images/google_sign_image.png'), // or NetworkImage
         onTap: () {},
+        width: 50,
+        height: 100,
       ),
     ),
 
@@ -56,8 +61,7 @@ Column(
     RippleImageButton(
       image: const AssetImage('images/google_sign_image.png'),
       onTap: () {},
-      width: 200,
-      height: 50,
+      splashColor: Colors.red.withOpacity(0.5),
     ),
 
     const SizedBox(height: 18),
@@ -98,7 +102,7 @@ Color splashColor;          // ripple color
 ```text
 MIT License
 
-Copyright (c) 2023 Neander, Cave Dwellers
+Copyright (c) 2023 neander of donguran
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
