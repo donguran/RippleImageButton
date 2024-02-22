@@ -41,15 +41,15 @@ class RippleImageButton extends StatelessWidget {
   /// else things have default value.
   const RippleImageButton({
     super.key,
-    required ImageProvider image,
     required Function() onTap,
-    this.width = 200.0,
+    required ImageProvider image,
+    this.width,
     this.height = 50.0,
     this.margin,
     this.padding,
     this.constraints,
     this.borderRadius = 0.0,
-    this.fit = BoxFit.cover,
+    this.fit = BoxFit.fitWidth,
     this.splashColor,
   })  : _image = image,
         _onTap = onTap;
@@ -105,7 +105,8 @@ class RippleImageButton extends StatelessWidget {
   /// [fit] is [image] cover size.
   /// [BoxFit] fill, contain, cover (etc)
   ///
-  /// default value = BoxFit.cover
+  /// default value = BoxFit.fitWidth
+  /// if it don't resize height so change BoxFit.cover.
   final BoxFit fit;
 
   /// [splashColor] is ripple effect color after [onTap].
@@ -115,26 +116,28 @@ class RippleImageButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: margin,
-      padding: padding,
-      constraints: constraints,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(borderRadius),
-        image: DecorationImage(
-          image: _image,
-          fit: fit,
-        ),
-      ),
-      child: Material(
-        color: Colors.transparent,
-        child: InkWell(
-          splashColor: splashColor,
+    return LayoutBuilder(
+      builder: (context, constraints) => Container(
+        margin: margin,
+        padding: padding,
+        constraints: constraints,
+        decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(borderRadius),
-          onTap: _onTap,
-          child: SizedBox(
-            width: width,
-            height: height,
+          image: DecorationImage(
+            image: _image,
+            fit: fit,
+          ),
+        ),
+        child: Material(
+          color: Colors.transparent,
+          child: InkWell(
+            splashColor: splashColor,
+            borderRadius: BorderRadius.circular(borderRadius),
+            onTap: _onTap,
+            child: SizedBox(
+              width: width ?? constraints.maxWidth,
+              height: height,
+            ),
           ),
         ),
       ),

@@ -16,7 +16,7 @@ Install link : <a href="https://pub.dev/packages/ripple_image_button/install">ht
 #### pubspec.yaml
 ```flutter
 dependencies:
-  ripple_image_button: ^1.1.1
+  ripple_image_button: ^1.1.2
 ```
 
 <br />

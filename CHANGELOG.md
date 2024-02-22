@@ -1,3 +1,8 @@
+## 1.1.2
+
+* change Fit default value BoxFit.fitWidth
+* if width have not value so it will be parent's constraints width value 
+
 ## 1.1.1
 
 * modify documentation
