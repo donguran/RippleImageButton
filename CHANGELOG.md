@@ -1,3 +1,6 @@
+## 1.1.3
+* deprecated constraints parameter
+
 ## 1.1.2
 
 * change Fit default value BoxFit.fitWidth

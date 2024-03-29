@@ -86,6 +86,8 @@ class RippleImageButton extends StatelessWidget {
   final EdgeInsetsGeometry? padding;
 
   /// [constraints] can control min, max size.
+  /// I used LayoutBuilder, so [constraints] should not use.
+  @Deprecated("Not used this.")
   final BoxConstraints? constraints;
 
   /// [borderRadius] can control corner radius.

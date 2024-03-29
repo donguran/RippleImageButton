@@ -16,7 +16,7 @@ Install link : <a href="https://pub.dev/packages/ripple_image_button/install">ht
 #### pubspec.yaml
 ```flutter
 dependencies:
-  ripple_image_button: ^1.1.2
+  ripple_image_button: ^1.1.3
 ```
 
 <br />
@@ -88,7 +88,6 @@ double width;               // width size
 double height;              // height size
 EdgeInsetsGeometry margin;  // margin
 EdgeInsetsGeometry padding; // padding
-BoxConstraints constraints; // constraints, control min or max size
 double borderRadius;        // border radius size
 BoxFit fit;                 // image fit
 Color splashColor;          // ripple color
