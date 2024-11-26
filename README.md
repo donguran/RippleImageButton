@@ -1,7 +1,11 @@
 [![Pub Version](https://img.shields.io/pub/v/ripple_image_button)](https://pub.dev/packages/ripple_image_button)
 
-# RippleImageButton
+
+# Deprecated(RippleImageButton) replacement PictureButton
 Image Button, has ripple effect
+<br/>
+
+PictureButton URL:[https://pub.dev/packages/picture_button](https://pub.dev/packages/picture_button)
 
 
 <br/>
